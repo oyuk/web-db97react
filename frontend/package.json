@@ -1,9 +1,9 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./public/index.js",
   "scripts": {
-    "start": "webpack-dev-server --host 0.0.0.0 --inline --content-base .",
+    "start": "webpack-dev-server --host 0.0.0.0 --inline --content-base ./public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

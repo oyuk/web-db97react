@@ -1,7 +1,7 @@
 module.exports = {
-    entry: './index.js',
+    entry: './src/index.js',
     output: {
-        path: __dirname,
+        path: './public',
         filename: 'bundle.js'
     },
     module: {
@@ -15,5 +15,15 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    // devServer: {
+    //   contentBase: './public',
+    //   inline: true,
+    //   port: 8080,
+    //   historyApiFallback: true,
+    //   stats: {
+    //     version: false,
+    //     hash: false,
+    //     chunkModules: false,
+    // },
 }
