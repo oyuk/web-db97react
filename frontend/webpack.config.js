@@ -31,14 +31,17 @@ module.exports = {
     postcss: [
       require('postcss-easy-import')({ glob: true }),
     ],
-    // devServer: {
-    //   contentBase: './public',
-    //   inline: true,
-    //   port: 8080,
-    //   historyApiFallback: true,
-    //   stats: {
-    //     version: false,
-    //     hash: false,
-    //     chunkModules: false,
-    // },
+    devServer: {
+      contentBase: './public',
+      inline: true,
+      port: 8080,
+      host: "0.0.0.0",
+      historyApiFallback: true,
+      stats: {
+        version: false,
+        hash: false,
+        chunkModules: false,
+      }
+    },
+
 }

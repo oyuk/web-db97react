@@ -6,6 +6,6 @@ export default class NoteBody extends React.Component {
     return <div
       className="NoteBody"
       dangerouslySetInnerHTML={{ __html: marked(this.props.body) }}
-            />;
+      />;
   }
 }

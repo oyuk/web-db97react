@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'flux/utils';
 import NoteAction from '../../actions/NoteAction';
-import StarredNotesStore from '../../stores/starredNotesStore';
+import starredNotesStore from '../../stores/starredNotesStore';
 import StarredNoteList from '../../components/StarredNoteList/StarredNoteList';
 
 class Starred extends React.Component {
@@ -14,7 +14,7 @@ class Starred extends React.Component {
   }
 
   componentDidMount() {
-
+    NoteAction.fetchStarred();
   }
 
   render() {

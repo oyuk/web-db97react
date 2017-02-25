@@ -1,6 +1,6 @@
 import React from 'react';
-import StarButton from '../StarButton/StarButton'
-import Button from '../Button/Button'
+import StarButton from '../StarButton/StarButton';
+import Button from '../Button/Button';
 import { browserHistory } from 'react-router';
 
 export default class NoteHeader extends React.Component {
@@ -9,11 +9,11 @@ export default class NoteHeader extends React.Component {
   }
 
   handleClickEdit() {
-    browserHistory.push(`/note/${this.props.note.id}/edit`)
+    browserHistory.push(`/notes/${this.props.note.id}/edit`);
   }
 
   handleClickDelete() {
-    if(window.confirm('Are you sure?')) {
+    if (window.confirm('Are you sure?')) {
       this.props.onDeleteNote();
     }
   }
@@ -22,16 +22,16 @@ export default class NoteHeader extends React.Component {
     const note = this.props.note;
 
     return <div className="NoteHeader">
-    <h1 className="NoteHeader-title">
-      {note.title}
-    </h1>
-    <div className="NoteHeader-meta">
-      <span className="NoteHeader-author"><img src="/assets/user.svg" width="24" height="24"/> {note.user}</span>
-      <span className="NoteHeader-updated">{note.updated}</span>
+      <h1 className="NoteHeader-title">
+        {note.title}
+      </h1>
+      <div className="NoteHeader-meta">
+        <span className="NoteHeader-author"><img src="/assets/user.svg" width="24" height="24" /> {note.user}</span>
+        <span className="NoteHeader-updated">{note.updated}</span>
       </div>
       <div className="NoteHeader-buttons">
         <Button hidden={!this.isOwn()} onClick={() => this.handleClickEdit()}>Edit</Button>
-        <StarButton starred={note.starred} onChange={this.props.onChangeStar}/>
+        <StarButton starred={note.starred} onChange={this.props.onChangeStar} />
       </div>
     </div>;
   }
