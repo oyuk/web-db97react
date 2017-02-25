@@ -1,0 +1,11 @@
+node:
+  build: .
+  volumes:
+    # host:containar
+    - ./src/frontend:/frontend/
+    - /frontend/node_modules
+  working_dir: /frontend
+  command: yarn run start
+  ports:
+    #host:containar
+    - "8080:8080"
